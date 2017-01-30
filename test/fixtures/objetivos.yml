@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mision: one
+  nombre: MyString
+  descripcion: MyString
+  habilitado: MyString
+  visible: MyString
+  urlvideoinstructivo: MyString
+  urlpdfinstructivo: MyString
+  urlhtmlinstructivo: MyString
+  descripcioninstructivo: MyString
+  urlvideoevaluativo: MyString
+  urlpdfevaluativo: MyString
+  urlhtmlevaluativo: MyString
+  descripcionevaluativo: MyString
+
+two:
+  mision: two
+  nombre: MyString
+  descripcion: MyString
+  habilitado: MyString
+  visible: MyString
+  urlvideoinstructivo: MyString
+  urlpdfinstructivo: MyString
+  urlhtmlinstructivo: MyString
+  descripcioninstructivo: MyString
+  urlvideoevaluativo: MyString
+  urlpdfevaluativo: MyString
+  urlhtmlevaluativo: MyString
+  descripcionevaluativo: MyString

@@ -1,0 +1,2 @@
+json.extract! objetivo, :id, :mision_id, :nombre, :descripcion, :habilitado, :visible, :urlvideoinstructivo, :urlpdfinstructivo, :urlhtmlinstructivo, :descripcioninstructivo, :urlvideoevaluativo, :urlpdfevaluativo, :urlhtmlevaluativo, :descripcionevaluativo, :created_at, :updated_at
+json.url objetivo_url(objetivo, format: :json)

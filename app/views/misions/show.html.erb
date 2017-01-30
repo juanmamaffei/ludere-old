@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @mision.nombre %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @mision.nivel %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @mision.descripcion %>
+</p>
+
+<p>
+  <strong>Urltemario:</strong>
+  <%= @mision.urltemario %>
+</p>
+
+<p>
+  <strong>Urlimagen:</strong>
+  <%= @mision.urlimagen %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @mision.comentario %>
+</p>
+
+<p>
+  <strong>Habilitado:</strong>
+  <%= @mision.habilitado %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @mision.visible %>
+</p>
+<h1>Objetivos:</h1>
+
+<% @objetivos.each do |objetivo| %>
+  <li><%= objetivo.nombre %> - <%= objetivo.descripcion %>  </li>
+<% end %>
+<%= link_to 'Edit', edit_mision_path(@mision) %> |
+<%= link_to 'Back', misions_path %>

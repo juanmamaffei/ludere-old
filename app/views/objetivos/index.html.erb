@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Objetivos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mision</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Habilitado</th>
+      <th>Visible</th>
+      <th>Urlvideoinstructivo</th>
+      <th>Urlpdfinstructivo</th>
+      <th>Urlhtmlinstructivo</th>
+      <th>Descripcioninstructivo</th>
+      <th>Urlvideoevaluativo</th>
+      <th>Urlpdfevaluativo</th>
+      <th>Urlhtmlevaluativo</th>
+      <th>Descripcionevaluativo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @objetivos.each do |objetivo| %>
+      <tr>
+        <td><%= objetivo.mision %></td>
+        <td><%= objetivo.nombre %></td>
+        <td><%= objetivo.descripcion %></td>
+        <td><%= objetivo.habilitado %></td>
+        <td><%= objetivo.visible %></td>
+        <td><%= objetivo.urlvideoinstructivo %></td>
+        <td><%= objetivo.urlpdfinstructivo %></td>
+        <td><%= objetivo.urlhtmlinstructivo %></td>
+        <td><%= objetivo.descripcioninstructivo %></td>
+        <td><%= objetivo.urlvideoevaluativo %></td>
+        <td><%= objetivo.urlpdfevaluativo %></td>
+        <td><%= objetivo.urlhtmlevaluativo %></td>
+        <td><%= objetivo.descripcionevaluativo %></td>
+        <td><%= link_to 'Show', objetivo %></td>
+        <td><%= link_to 'Edit', edit_objetivo_path(objetivo) %></td>
+        <td><%= link_to 'Destroy', objetivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Objetivo', new_objetivo_path %>
