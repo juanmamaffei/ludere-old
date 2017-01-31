@@ -5,6 +5,7 @@ class MisionsController < ApplicationController
   # GET /misions.json
   def index
     @misions = Mision.all
+
   end
 
   # GET /misions/1

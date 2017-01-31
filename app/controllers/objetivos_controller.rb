@@ -10,6 +10,7 @@ class ObjetivosController < ApplicationController
   # GET /objetivos/1
   # GET /objetivos/1.json
   def show
+    
   end
 
   # GET /objetivos/new

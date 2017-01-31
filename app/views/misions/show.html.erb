@@ -1,3 +1,63 @@
+      <div class="panel panel-red">
+          <div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg><%= @mision.nombre %>                 <a href="misions/<%= @mision.id %>"><button class="btn btn-primary btn-md">¡Agregar a Mis Misiones!</button></a></div>
+          <div class="panel-body">
+            <ul class="todo-list">
+            <li class="todo-list-item">
+                </li>
+              
+              <li class="todo-list-item">
+                <%= @mision.descripcion %>
+                         </li>
+
+                <li class="todo-list-item">Nivel: <%= @mision.nivel %></li>
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <div class="input-group">
+            
+
+              
+            </div>
+          </div>
+        
+</div><!--/.col-->
+
+
+      <div class="panel panel-blue">
+          <div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg>Objetivos de la misión</div>
+          <div class="panel-body">
+            <ul class="todo-list">
+            
+<% @objetivos.each do |objetivo| %>
+            <li class="todo-list-item">
+                <div class="checkbox">
+                  <%= objetivo.nombre %></div>
+                  <div class="pull-right action-buttons">
+                  <svg class="glyph signia star"><use xlink:href="#signia-star"/></svg>
+                  <svg class="glyph signia star"><use xlink:href="#signia-star"/></svg>
+                  <svg class="glyph signia star"><use xlink:href="#signia-star"/></svg>
+                </div>
+                </li>
+
+                
+
+              
+<% end %>
+
+            </ul>
+          </div>
+                </div>
+
+              
+
+            </ul>
+          </div>
+</div>
+        
+</div>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -39,10 +99,5 @@
   <strong>Visible:</strong>
   <%= @mision.visible %>
 </p>
-<h1>Objetivos:</h1>
-
-<% @objetivos.each do |objetivo| %>
-  <li><%= objetivo.nombre %> - <%= objetivo.descripcion %>  </li>
-<% end %>
 <%= link_to 'Edit', edit_mision_path(@mision) %> |
 <%= link_to 'Back', misions_path %>
