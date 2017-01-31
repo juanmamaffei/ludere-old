@@ -1,69 +1,110 @@
-<p id="notice"><%= notice %></p>
+
+      <div class="panel panel-red">
+          <div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg><%= @mision.nombre %>                 <a href="misions/<%= @mision.id %>"><button class="btn btn-primary btn-md">¡Agregar a Mis Misiones!</button></a></div>
+          <div class="panel-body">
+            <ul class="todo-list">
+
+              
+                <li class="todo-list-item">Nivel: <%= @mision.nivel %></li>
+            <li class="todo-list-item"><%= @objetivo.descripcion %> 
+                </li>
+            <li class="todo-list-item">PROGRESS BAR
+                </li>
+                
+            </ul>
+          </div>
+
+        
+</div><!--/.col-->
+
+  <div class="col-sm-9"> 
+  <div class="panel panel-blue">
+          <div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg>  <%= @objetivo.nombre %></div>
+          <div class="panel-body">
+            <ul class="todo-list">
+
+            <li class="todo-list-item">
+                <div class="checkbox">
+                   <%= @objetivo.descripcioninstructivo %></div>
+
+                </li><li class="todo-list-item">
+<div class="hs-responsive-embed-youtube">   <%= raw @objetivo.urlvideoinstructivo %> </div></li><br><br>
+
+            </ul>
+
+          </div>          <div class="panel-footer">
+
 
 <p>
-  <strong>Mision:</strong>
-  <%= @objetivo.mision %>
+  <a href="<%= @objetivo.urlpdfinstructivo %>"><strong>Descargar PDF</strong></a>
+  
 </p>
 
 <p>
-  <strong>Nombre:</strong>
-  <%= @objetivo.nombre %>
+  <strong>Seguir aprendiendo en <a href="<%= @objetivo.urlhtmlinstructivo %>">este sitio web</a>.</strong>
+  
+</p>
+
+          </div></div>
+                </div><!--/.col-->
+  <div class="col-sm-3"> 
+<div class="panel">
+          <div class="panel-heading dark-overlay"><svg class="glyph stroked clipboard-with-paper"><use xlink:href="#stroked-clipboard-with-paper"></use></svg>  Evaluar objetivo</div>
+          <div class="panel-body">
+            <ul class="todo-list">
+
+            <li class="todo-list-item">
+                <div class="checkbox">
+                    <%= @objetivo.descripcionevaluativo %></div>
+
+                </li><li class="todo-list-item">
+<div class="hs-responsive-embed-youtube">   <%= raw @objetivo.urlvideoevaluativo %> </div></li><br><br>
+
+            </ul>
+
+                    <div class="panel-footer">
+
+
+<p>
+  <a href="<%= @objetivo.urlpdfevaluativo %>"><strong>Descargar PDF</strong></a>
+  
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
-  <%= @objetivo.descripcion %>
+ <a href="<%= @objetivo.urlhtmlevaluativo %>"> <strong>Evaluación externa</strong></a>
+  
+</p>
+<p>
+ <a href=""> <strong>Subir evaluación:</strong></a>
+  
 </p>
 
-<p>
-  <strong>Habilitado:</strong>
-  <%= @objetivo.habilitado %>
-</p>
 
-<p>
-  <strong>Visible:</strong>
-  <%= @objetivo.visible %>
-</p>
 
-<p>
-  <strong>Urlvideoinstructivo:</strong>
-  <%= @objetivo.urlvideoinstructivo %>
-</p>
 
-<p>
-  <strong>Urlpdfinstructivo:</strong>
-  <%= @objetivo.urlpdfinstructivo %>
-</p>
 
-<p>
-  <strong>Urlhtmlinstructivo:</strong>
-  <%= @objetivo.urlhtmlinstructivo %>
-</p>
+          </div>
+          </div></div>
+  </div>
+              
 
-<p>
-  <strong>Descripcioninstructivo:</strong>
-  <%= @objetivo.descripcioninstructivo %>
-</p>
+            </ul>
 
-<p>
-  <strong>Urlvideoevaluativo:</strong>
-  <%= @objetivo.urlvideoevaluativo %>
-</p>
+          </div>
+</div>
+        
+</div>
 
-<p>
-  <strong>Urlpdfevaluativo:</strong>
-  <%= @objetivo.urlpdfevaluativo %>
-</p>
 
-<p>
-  <strong>Urlhtmlevaluativo:</strong>
-  <%= @objetivo.urlhtmlevaluativo %>
-</p>
 
-<p>
-  <strong>Descripcionevaluativo:</strong>
-  <%= @objetivo.descripcionevaluativo %>
-</p>
+
+
+
+
+
+
+
+
 
 <%= link_to 'Edit', edit_objetivo_path(@objetivo) %> |
 <%= link_to 'Back', objetivos_path %>

@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development
-
+  gem 'devise', '~> 4.2'
 
 	#gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	#gem 'autoprefixer-rails', '~> 6.7', '>= 6.7.1'

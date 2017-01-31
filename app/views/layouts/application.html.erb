@@ -13,30 +13,8 @@
 
     </head>
    <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="home\index">Ludere</a>
-        <ul class="user-menu">
-          <li class="dropdown pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Juan Manuel / Iniciar sesión<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mi Perfil</a></li>
-              <li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Mensajes</a></li>
-              <li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Cerrar sesión</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-              
-    </div><!-- /.container-fluid -->
-  </nav>
+<%= render "partials/navigation" %>
+  
   <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     
     <ul class="nav menu">
@@ -52,9 +30,9 @@
     <ul class="nav menu">
      <li> <a href="widgets.html"><svg class="glyph signia facebook"><use xlink:href="#signia-facebook"/></svg>Facebook</a></use></svg></a></li>
      <li><a href=""><svg class="glyph signia twitter"><use xlink:href="#signia-twitter"/></svg></use>Twitter</a></svg></a></li>
-     <li><a href=""><svg class="glyph social youtube"><use xlink:href="#social-youtube"/></svg></use>Youtube</a></svg></a></li>
+     <li><a href="https://www.youtube.com/channel/UCe9VNA5ep0VYM1E7VpES03A"><svg class="glyph social youtube"><use xlink:href="#social-youtube"/></svg></use>Youtube</a></svg></a></li>
      <li><a href=""><svg class="glyph signia pinterest "><use xlink:href="#signia-pinterest"/></svg></use>Pinterest</a></svg></a></li>
-     <li><a href=""><svg class="glyph signia instagram"><use xlink:href="#signia-instagram"></use></svg>Instagram</a></li></ul>
+     <li><a href=""><svg class="glyph signia instagram"><use xlink:href="#signia-instagram"/></svg>Instagram</a></li></ul>
 </li>
 
     </div>
@@ -67,6 +45,19 @@
         <li class="active">LUDERE</li>
       </ol>
     </div><!--/.row-->
+   
+    <div class="row">
+      <div class="col-lg-12"> <%  unless notice == nil %>
+        <div class="alert bg-success" role="alert">
+          <svg class="glyph stroked checkmark"><use xlink:href="#stroked-checkmark"></use></svg><%= notice %><a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+        </div><% end %>    <%  unless alert == nil %>
+        <div class="alert bg-warning" role="alert">
+          <svg class="glyph stroked flag"><use xlink:href="#stroked-flag"></use></svg><%= alert %><a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+        </div><% end %>
+
+      </div>
+    </div><!--/.row-->  
+
   <%= yield %>
      
        
@@ -77,7 +68,7 @@
   </div>  <!--/.main-->
 
   <script>
-    
+
     $(window).on('resize', function () {
       if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
     })

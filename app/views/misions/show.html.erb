@@ -31,11 +31,11 @@
 <% @objetivos.each do |objetivo| %>
             <li class="todo-list-item">
                 <div class="checkbox">
-                  <%= objetivo.nombre %></div>
+                  <a href="/misions/<%= @mision.id %>/objetivos/<%= objetivo.id %>"><%= objetivo.nombre %></div></a>
                   <div class="pull-right action-buttons">
-                  <svg class="glyph signia star"><use xlink:href="#signia-star"/></svg>
-                  <svg class="glyph signia star"><use xlink:href="#signia-star"/></svg>
-                  <svg class="glyph signia star"><use xlink:href="#signia-star"/></svg>
+                 <a href="."><svg class="glyph signia star"><use xlink:href="#signia-star"/></use></svg>1</a>
+                 <a href="."><svg class="glyph signia star"><use xlink:href="#signia-star"/></use></svg>2</a>
+                 <a href="."><svg class="glyph signia star"><use xlink:href="#signia-star"/></use></svg>3</a>
                 </div>
                 </li>
 
@@ -44,6 +44,7 @@
               
 <% end %>
 
+
             </ul>
           </div>
                 </div>
@@ -51,6 +52,7 @@
               
 
             </ul>
+
           </div>
 </div>
         

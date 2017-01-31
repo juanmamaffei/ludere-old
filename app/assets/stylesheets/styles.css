@@ -757,12 +757,33 @@ h1.page-header {
 #checkbox {
 	margin: 0;
 }
-
+#videotu {
+	margin: 0;
+	text-align: center;
+}
 .todo-list .checkbox { 
 	display:inline-block; 
 	margin: 0px;
 }
+.hs-responsive-embed-youtube { /* Ejemplo de video embebido: <div class="hs-responsive-embed-youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/vu47ANQqxpM?rel=0" frameborder="0" allowfullscreen></iframe></div>      */
 
+position: relative;
+
+padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+
+padding-top: 25px;
+
+}
+
+.hs-responsive-embed-youtube iframe {
+
+position: absolute;
+
+width: 100%!important;
+
+height: 100%!important;
+
+}
 .panel-body input[type=checkbox]:checked + label { 
 	text-decoration: line-through;
 	color: #777; 
